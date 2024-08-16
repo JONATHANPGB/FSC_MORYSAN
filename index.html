@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>¿QUÉ ES FSC?</title>
     <link rel="icon" href="favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">   
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
     <style>
         body {
@@ -206,9 +206,24 @@
         </video>
     </div>
 
+    <footer>
+        <strong>REALIZADA POR JONATHAN PAZ GALLARDO</strong>
+        <nav class="navbar1">
+            <a href="https://www.facebook.com/jonathan.paz.75286" target="_blank"><img alt="Contáctame" src="facebook.png" width="48" height="48" /></a>
+            <a href="https://www.instagram.com/jonathan030727/" target="_blank"><img alt="Contáctame" src="instagram.png" width="48" height="48" /></a>
+        </nav>    
+    </footer>
+
     <!-- jQuery, Popper.js, Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.menu-toggle').click(function () {
+                $('.navbar').slideToggle();
+            });
+        });
+    </script>
 </body>
 </html>
