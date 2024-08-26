@@ -9,9 +9,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
     <link rel="icon" href="favicon.png" type="image/x-icon"> 
-<style>
-        /* Estilos globales */
-        body {
+    <style>
+            body {
             font-family: 'Verdana', sans-serif;
             margin: 0;
             padding: 0;
@@ -24,7 +23,6 @@
         /* Encabezado */
         .header {
 	background-color: rgba(255, 255, 255, 0);
-            background-image: url
             background-size: cover; 
             background-repeat: no-repeat; 
             background-attachment: fixed; 
@@ -42,7 +40,7 @@
         }
 
         .header a {
-            color: #FFF;
+            color: #000000;
             text-decoration: none;
             margin: 0 2px;
             padding: 3px 6px;
@@ -52,8 +50,8 @@
         }
 
         .header a:hover {
-            background-color: #C11A1A;
-            border: 1px solid #C11A1A;
+            background-color: #7FB589;
+            border: 1px solid #7FB589g;
         }
 
         /* Tabla */
@@ -85,14 +83,14 @@
             top: 0;
         }
 
-        
+        /* Botones */
         .button-container {
             text-align: center;
             margin: 20px;
         }
 
         .button {
-            background-color: #28a745;
+            background-color: #7FB589;
             color: #fff;
             border: none;
             padding: 10px 20px;
@@ -103,41 +101,39 @@
         }
 
         .button:hover {
-            background-color: #1e7e34;
+            background-color: #7FB589;
         }
 
-        
-        footer 
-	{
-		position: absolute;
-		width: 100%;
-  		height: 40px;
+        /* Pie de Página */
+        footer {
 		background-color: rgba(255, 255, 255, 0);
             color: #000000;
             padding: 10px 0;
             text-align: center;
             box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
         }
-.container 
+	.container 
 	{
             max-width: 800px;
-		height: 500px;
             margin: 20px auto;
             padding: 20px;
             background-color: #fff;
-            box-shadow: 0 0 10px rgb(223, 128, 0);
+            box-shadow: 0 0 10px #0892a8e0;
 		border-radius: 20px; 
         }
 
-        .section 
-	{
-            text-align: center;
+   .iframe-container {
+            width: 100%;
+            height: 100vh; /* Ajusta la altura al 100% de la ventana del navegador */
+            overflow: hidden; /* Oculta cualquier contenido que desborde el contenedor */
         }
 
-        .section-img {
-            width: auto;
-            height: auto; 
+        .iframe-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
         }
+
 .rotating-element {
   width: 800px;
   height: 30px;
@@ -160,8 +156,16 @@ object-fit: cover;
   height:100%;
 }
 
-  /* Menú de navegación receptivo */
-        .navbar {
+ .dropdown-menu a {
+        color: #000000; 
+    }
+
+    .dropdown-menu a:hover {
+        color: #7FB589; 
+    }
+
+        /* Menú de navegación receptivo */
+       .navbar {
             display: flex;
             background-color: rgba(255, 255, 255, 0.9);
             position: absolute;
@@ -197,6 +201,8 @@ object-fit: cover;
             cursor: pointer;
         }
 
+        
+      
         @media screen and (min-width: 769px) {
             .navbar {
                 display: none;
@@ -207,26 +213,44 @@ object-fit: cover;
             }
         }
     </style>
-
 </head>
 <body>
-  <header class="header">
-<img src="logo.jpg" alt="Logo de la empresa">
-        <h3>CALIDAD</h3> 
-
-
-    <div class="header">
-        <div class="menu-toggle">
-            <i class="fas fa-bars"></i>
+    <header class="header">
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo de la empresa">
         </div>
-        <nav class="navbar">
-            <a href="cal.html"><i class="fas fa-file"></i>MENÚ</a>
-	    <a href="sec2.html"><i class="fas fa-file"></i>BPM</a>	
-            <a href="sec2.html"><i class="fas fa-file"></i>FSC</a>
-            <a href="sec3.html"><i class="fas fa-file"></i>TEST</a>
+        <h3><strong>FSC</strong></h3>
+        <div class="menu-toggle">
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="fas fa-file"></i> MENÚ </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-file"></i> EVALUACIONES
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="e1.html">ALMACÉN</a>
+                            <a class="dropdown-item" href="e2.html">CALIDAD</a>
+                            <a class="dropdown-item" href="e3.html">COMPRAS</a>
+                            <a class="dropdown-item" href="e4.html">DISEÑO</a>
+                            <a class="dropdown-item" href="e5.html">FACTURACIÓN</a>
+                            <a class="dropdown-item" href="e6.html">HYE</a>
+                            <a class="dropdown-item" href="e7.html">IMPRESIÓN</a>
+                            <a class="dropdown-item" href="e8.html">RH</a>
+                            <a class="dropdown-item" href="e9.html">VENTAS</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </nav>
-    </div>
-</header>
+    </header>
 <div class="container">
         <section>
                        <h2 align="center" style="color:#007C40"> <strong> FSC </strong></h2>
